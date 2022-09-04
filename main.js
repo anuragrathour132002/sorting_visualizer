@@ -48,7 +48,7 @@ function swap(val1, val2)
 
 async function bubblesort()
   {
-      const delay = 150;
+      const delay = 600;
       var bars = document.querySelectorAll(".bar");
      const size= bars.length;
      for(let i=0; i<size; i++)
@@ -80,7 +80,7 @@ async function bubblesort()
 
 async function selectionsort()
 {
-  const delay = 300;
+  const delay = 600;
   let bars = document.querySelectorAll(".bar");
   const size= bars.length;
   var min_ind = 0;
@@ -92,7 +92,7 @@ async function selectionsort()
     {
       bars[j].style.backgroundColor = "red";
       bars[min_ind].style.backgroundColor = "red"
-      await new Promise((resolve)=>{setTimeout(()=>{resolve()},300)});
+      await new Promise((resolve)=>{setTimeout(()=>{resolve()},600)});
 
       var val1 = parseInt(bars[j].childNodes[0].innerHTML);
       var val2 = parseInt(bars[min_ind].childNodes[0].innerHTML);
@@ -124,7 +124,7 @@ async function selectionsort()
     bars[min_ind].childNodes[0].innerText = bars[i].childNodes[0].innerText;
     bars[i].childNodes[0].innerText = temp2;
     //swap(bars[min_ind], bars[i])
-    await new Promise((resolve)=>{setTimeout(()=>{resolve()},150)});
+    await new Promise((resolve)=>{setTimeout(()=>{resolve()},600)});
 
     bars[min_ind].style.backgroundColor = "  rgb(24, 190, 255)";
     bars[i].style.backgroundColor = "green";
@@ -144,7 +144,7 @@ async function insertionsort()
     var barheight = bars[i].style.height;
     bars[i].style.backgroundColor = "red";
     await new Promise((resolve)=>{
-      setTimeout(()=>resolve(), 150)
+      setTimeout(()=>resolve(), 500)
     });
     while(j>=0 && parseInt(bars[j].childNodes[0].innerHTML) >key)
     {
@@ -157,7 +157,7 @@ async function insertionsort()
       bars[j+1].childNodes[0].innerHTML =  bars[j].childNodes[0].innerHTML ;
       j--;
       await new Promise((resolve)=>{
-        setTimeout(()=>resolve(), 250)
+        setTimeout(()=>resolve(), 500)
       });
       for(var k=i;k>=0;k--){
         bars[k].style.backgroundColor = " rgb(49, 226, 13)";
@@ -169,7 +169,7 @@ async function insertionsort()
     bars[j + 1].childNodes[0].innerHTML = key;
 
     await new Promise((resolve)=>{
-      setTimeout(()=>resolve(), 250)
+      setTimeout(()=>resolve(), 500)
     });
 
     bars[i].style.backgroundColor = " rgb(49, 226, 13)";
